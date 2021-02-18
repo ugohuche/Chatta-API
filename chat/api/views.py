@@ -66,7 +66,7 @@ class PasswordChangeView(UpdateAPIView):
 
 class ChatListView(ListAPIView):
 	serializer_class = ChatSerializer
-	permission_class = (permissions.AllowAny, )
+	permission_class = (permissions.IsAuthenticated, )
 
 	def get_queryset(self):
 		queryset = Chat.objects.all()
@@ -81,7 +81,7 @@ class ChatListView(ListAPIView):
 class ChatDetailView(RetrieveAPIView):
 	queryset = Chat.objects.all()
 	serializer_class = ChatSerializer
-	permission_class = (permissions.AllowAny, )
+	permission_class = (permissions.IsAuthenticated, )
 
 
 class ChatCreateView(ListCreateAPIView):

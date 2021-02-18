@@ -164,7 +164,7 @@ REST_FRAMEWORK = {
 }
 
 
-CORS_ALLOW_HEADERS = ('x-access-token', 'content-type')
+CORS_ALLOW_HEADERS = ('x-access-token', 'content-type', 'origin', 'accept')
 CORS_ORIGIN_ALLOW_ALL = False
 CORS_ORIGIN_WHITELIST = (
     'http://localhost:1234',
